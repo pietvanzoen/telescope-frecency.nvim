@@ -299,7 +299,7 @@ local frecency = function(opts)
       entry_maker = entry_maker,
     },
     previewer = require("telescope.config").values.file_previewer(opts),
-    sorter = require ("telescope").extensions.fzf.native_fzf_sorter()
+    sorter = require("telescope.sorters").fuzzy_with_index_bias()
   })
   state.picker:find()
 
